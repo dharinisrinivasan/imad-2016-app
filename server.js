@@ -22,7 +22,7 @@ var articleOne = {
 var htmlTemplate =  `<html>
     <head>
         <title>
-            Article Two | Dharini & Varun Sanjay
+            ${title}
         </title>
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
@@ -33,7 +33,7 @@ var htmlTemplate =  `<html>
             </div>
             <hr/>
             <h3>
-                ${title}
+                ${heading}
             </h3>
             <div>
                 ${date}
