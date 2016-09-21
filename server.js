@@ -5,17 +5,41 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-    title:'Article One | Dharini',
-    heading: 'Article One',
-    date:'Sep 19, 2016',
-    content: ` <p>
-                    This is the content of my article one. This is my first webpage as well.This is the content of my article one. This is my first webpage as well.
-                </p>
-                <p>
+var articles = {
+
+    articleOne : {
+               
+                title:'Article One | Dharini',
+                heading: 'Article One',
+                date:'Sep 19, 2016',
+                content: ` <p>
+                                This is the content of my article one. This is my first webpage as well.This is the content of my article one. This is my first webpage as well.
+                            </p>
+                            <p>
+                                
+                                This is the content of my article one. This is my first webpage as well.This is the content of my article one. This is my first webpage as well.
+                            </p>`
+        },
+    articleTwo :{ 
                     
-                    This is the content of my article one. This is my first webpage as well.This is the content of my article one. This is my first webpage as well.
-                </p>`
+                    title:'Article TWO | Dharini VARUN',
+                    heading: 'Article 22222',
+                    date:'Sep 20, 2016',
+                    content: ` <p>
+                                    This is the content of my article TWOOOOOO.
+                                </p>`
+        } ,
+    articleThree : { 
+            
+                        title:'Article THREEEE | Dharini',
+                        heading: 'Article 3333333',
+                        date:'Sep 21, 2016',
+                        content: ` <p>
+                                        This is the content of my article three. This is my first webpage as well.This is the content of my article 3333. This is my first webpage as well.
+                                    </p>`
+                     
+                    }
+
     
 };
 
