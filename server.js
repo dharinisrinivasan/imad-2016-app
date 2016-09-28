@@ -40,7 +40,7 @@ var articles = {
                     }
 };
 
- function createTemplate(data) {
+ function createTemplate (data) {
    
     var heading = data.heading;
     var date = data.date;
@@ -74,7 +74,7 @@ var articles = {
                 </body>
             </html> `;
         return htmlTemplate;
-}
+};
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
