@@ -1,8 +1,9 @@
 // counter code
 
-//var button = document.getElementById('counter');
+var button = document.getElementById('counter');
 
-button.onClick = function() {
+ button.onclick = function() {
+
 alert("Hi, THis is MAIN");
   //  counter = counter + 1;
     //var span = document.getElementById('count');
