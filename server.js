@@ -5,76 +5,6 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articles = {
-    'article-one' : {
-               
-                title1:'Article One | Dharini',
-                heading: 'Article One',
-                date:'Sep 19, 2016',
-                content: ` <p>
-                                This is the content of my article one. This is my first webpage as well.This is the content of my article one. This is my first webpage as well.
-                            </p>
-                            <p>
-                                
-                                This is the content of my article one. This is my first webpage as well.This is the content of my article one. This is my first webpage as well.
-                            </p>`
-        },
-    'article-two' :{ 
-                    
-                    title1:'Article TWO | Dharini VARUN',
-                    heading: 'Article 22222',
-                    date:'Sep 20, 2016',
-                    content: ` <p>
-                                    This is the content of my article TWOOOOOO.
-                                </p>`
-        } ,
-    'article-three' : { 
-            
-                        title1:'Article THREEEE | Dharini',
-                        heading: 'Article 3333333',
-                        date:'Sep 21, 2016',
-                        content: ` <p>
-                                        This is the content of my article three. This is my first webpage as well.This is the content of my article 3333. This is my first webpage as well.
-                                    </p>`
-                     
-                    }
-};
-
- function createTemplate (data) {
-   
-    var heading = data.heading;
-    var date = data.date;
-    var title1 = data.title1;
-    var content = data.content;
-    
-    var htmlTemplate =  `<html>
-                <head>
-                    <title>
-                        ${title1}
-                    </title>
-                    <meta name= "viewport" content="width=device-width,initial-scale=1">
-                    <link href="/ui/style.css" rel="stylesheet" />
-                </head>
-                <body>
-                    <div class ="container">
-                        <div>
-                            <a href="/">Home</a>
-                        </div>
-                        <hr/>
-                        <h3>
-                            ${heading}
-                        </h3>
-                        <div>
-                            ${date}
-                        </div>
-                        <div>
-                            ${content}
-                        </div>
-                       </div>
-                </body>
-            </html> `;
-        return htmlTemplate;
-}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -90,12 +20,12 @@ app.get('/ui/favicon.ico', function (req, res) {
 res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
  });
  
-app.get('/:articleName', function (req, res) {
+// app.get('/:articleName', function (req, res) {
     //articleName == article-one
-    var articleName = req.params.articleName;
-    res.send(createTemplate(articles[articleName]));
+ //   var articleName = req.params.articleName;
+ //   res.send(createTemplate(articles[articleName]));
     
-});
+//});
 
 
 app.get('/ui/style.css', function (req, res) {
