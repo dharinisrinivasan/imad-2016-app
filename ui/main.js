@@ -1,7 +1,7 @@
 // counter code
 var button = document.getElementById('counter');
 
-var counter = 0;
+
 button.onClick = function() {
     // Create a request Object to counter end point
     var request = new XMLHttpRequest();
