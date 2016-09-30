@@ -1,17 +1,26 @@
+//var button = document.getElementById('counter');
+//var counter = 0;
+//button.onclick = function() {
+//    counter = counter + 1;
+//    var s = document.getElementById('count');
+//    s.innerHTML = counter.toString();
+    
+//};
+
 // counter code
 
 var button = document.getElementById('counter');
 
-button.onclick = function() {
+button.onlick = function() {
     // Create a request Object to counter end point
     var request = new XMLHttpRequest();
     //capture the response and store it in a variable
     request.onreadystatechange = function() {
-      if(request.readystate === XMLHttpRequest.DONE){
+      if(request.readyState === XMLHttpRequest.DONE){
           if(request.status === 200) {
-              var counter = request.ResposeText;
+              var counter = request.resposeText;
               var s = document.getElementById('count');
-              s.innerHTML=counter.toString();
+              s.innerHTML = counter.toString();
           }
       }  
       //Not done yet
