@@ -19,9 +19,9 @@
     req.onreadystatechange = function() {
       if(req.readyState === XMLHttpRequest.DONE){
           if(req.status === 200) {
-              var counter = req.resposeText;
+              var counter1 = req.resposeText;
               var s = document.getElementById('count');
-              s.innerHTML = counter.toString();
+              s.innerHTML = counter1.toString();
           }
       }  
       //Not done yet
