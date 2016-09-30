@@ -11,16 +11,16 @@
 
  var button = document.getElementById('counter');
 
- button.onclick = function() {
+  button.onclick = function() {
     // Create a request Object to counter end point
-    var request = new XMLHttpRequest();
+    var req = new XMLHttpRequest();
     //capture the response and store it in a variable
-    request.onreadystatechange = function() {
-      if(request.readyState === XMLHttpRequest.DONE){
-          if(request.status === 200) {
-              var counter = request.resposeText;
-              var span = document.getElementById('count');
-              span.innerHTML = counter.toString();
+    req.onreadystatechange = function() {
+      if(req.readyState === XMLHttpRequest.DONE){
+          if(req.status === 200) {
+              var counter = req.resposeText;
+              var s = document.getElementById('count');
+              s.innerHTML = counter.toString();
           }
       }  
       //Not done yet
