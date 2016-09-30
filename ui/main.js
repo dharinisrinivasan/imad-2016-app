@@ -14,6 +14,7 @@
   button.onclick = function() {
     // Create a request Object to counter end point
     var req = new XMLHttpRequest();
+    
     //capture the response and store it in a variable
     req.onreadystatechange = function() {
       if(req.readyState === XMLHttpRequest.DONE){
