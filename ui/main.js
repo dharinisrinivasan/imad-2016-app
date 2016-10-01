@@ -38,11 +38,28 @@ var nameInp = document.getElementById('name');
 var name = nameInp.value;
 var submit = document.getElementById('submit-btn');
 submit.onclick = function () {
-  var names = ['name1','name2','name3','name4']  ;
-  var list = '';
-  for(var i=0;i<names.length;i++) {
-      list += '<li>' + names[i] + '</li>'
-  }
-  var ul = document.getElementById('namelist');
-  ul.innerHTML = list;
+    var req = new XMLHttpRequest();
+    
+    //capture the response and store it in a variable
+    req.onreadystatechange = function() {
+        
+      if(req.readyState === XMLHttpRequest.DONE){
+          if(req.status === 200) {
+                  var names = req.responseText;
+                  names = JSON.parse(names);
+                  var list = '';
+                  for(var i=0;i<names.length;i++) {
+                      list += '<li>' + names[i] + '</li>'
+                }
+          
+        var ul = document.getElementById('namelist');
+        ul.innerHTML = list;
+          }
+      }  
+      //Not done yet
+    };
+    
+  // Make request
+  req.open('GET', 'http://dharinisrinivasan.imad.hasura-app.io/submit-name?name=' +name,true);
+  req.send(null);
 };
