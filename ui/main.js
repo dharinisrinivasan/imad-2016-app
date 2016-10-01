@@ -34,10 +34,10 @@
 };
 
 //
-var nameInp = document.getElementById('name');
-var name = nameInp.value;
+
 var submit = document.getElementById('submit-btn');
 submit.onclick = function () {
+    
     var req = new XMLHttpRequest();
     
     //capture the response and store it in a variable
@@ -58,7 +58,8 @@ submit.onclick = function () {
       }  
       //Not done yet
     };
-    
+    var nameInp = document.getElementById('name');
+    var name = nameInp.value;
   // Make request
   req.open('GET', 'http://dharinisrinivasan.imad.hasura-app.io/submit-name?name=' +name,true);
   req.send(null);
