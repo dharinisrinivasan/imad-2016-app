@@ -17,6 +17,7 @@
     
     //capture the response and store it in a variable
     req.onreadystatechange = function() {
+        
       if(req.readyState === XMLHttpRequest.DONE){
           if(req.status === 200) {
               var counter1 = req.resposeText;
